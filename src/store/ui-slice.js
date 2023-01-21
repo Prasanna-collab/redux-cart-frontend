@@ -8,9 +8,10 @@ const uiSlice = createSlice({
       state.cartVisible = !state.cartVisible;
     },
     showNotification(state, action) {
+     const newItem= action.payload;
       state.notification = {
-        status: action.payload.status,
-        title: action.payload.title,
+        status: newItem.status,
+        title: action.payload.title,    //both syntax are same.
         message: action.payload.message,
       };
     },
